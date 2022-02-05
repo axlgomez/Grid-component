@@ -1,0 +1,138 @@
+.component
+{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 3.5em 1.5em;
+
+    @include responsive(desktop)
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 25% 25%;
+        margin-top: 3em;
+    }
+}
+
+.community
+{
+    background-color: #fff;
+    padding: 1em 1.5em;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 5px 15px rgba($color:black, $alpha: .1);
+
+    @include responsive(desktop)
+    {
+        grid-column: 1 / 3;
+        padding: 1em 2.5em;
+    }
+
+    &__title-primary
+    {
+        color: $cyan;
+        font-size: 21px;
+    }
+
+    &__title-secondary
+    {
+        color: $bright-yellow;
+    }
+
+    &__text
+    {
+        color: $grayish-blue;
+        line-height: 1.7;
+        font-size: 14px;
+
+        @include responsive(desktop)
+        {
+            transform: translateY(-.5em);
+        }
+    }
+}
+
+.subscription
+{
+    background-color: $cyan;
+    padding: 1em 1.5em 1.7em;
+    position: relative;
+    box-shadow: 0px 1px 5px rgba($color:black, $alpha: .1);
+
+    @include responsive(desktop)
+    {
+        border-radius: 0 0 0 10px;
+        padding: 1em 2.5em 1.7em;
+        box-shadow: 0px 10px 15px rgba($color:black, $alpha: .1);
+    }
+
+    &__title-primary
+    {
+        color: $light-gray;
+    }
+
+    &__title-secondary
+    {
+        color: #fff;
+        font-weight: map-get($font-weights, bold);
+    }
+
+    &__price
+    {
+        color: rgba($color: $light-gray, $alpha: .5);
+        font-weight: map-get($font-weights, regular);
+        font-size: 15px;
+        margin: .7em;
+        position: absolute;
+    }
+
+    &__text
+    {
+        color: $light-gray;
+        transform: translateY(-1em);
+        font-size: 15.5;
+
+        @include responsive(desktop)
+        {
+            font-size: 15px;
+        }
+    }
+
+    &__button
+    {
+        background-color: $bright-yellow;
+        border: none; outline: none;
+        color: #fff;
+        display: block;
+        width: 100%;
+        padding: .8em;
+        border-radius: 7px;
+        font-weight: map-get($font-weights, bold);
+        box-shadow: 0px 5px 15px rgba($color:black, $alpha: .2);
+    }
+}
+
+.us
+{
+    background-color: rgba($color: $cyan, $alpha: .8);
+    padding: 1em 1.5em;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 10px 15px rgba($color:black, $alpha: .1);
+
+    @include responsive(desktop)
+    {
+        border-radius: 0 0 10px 0;
+        padding: 1em 2.5em;
+    }
+
+    &__title-primary
+    {
+        color: #fff;
+    }
+
+    &__text
+    {
+        color: rgba($color: $light-gray, $alpha: .8);
+        font-size: 14.5px;
+        line-height: 1.5;
+    }
+}
