@@ -1,5 +1,9 @@
 @mixin responsive ($breakpoint) {
     @if $breakpoint == desktop {
-        @media screen and (min-width: 1150px) { @content }
+        @media screen and (min-width: 1024px) { @content }
+    }
+
+    @if $breakpoint == tablet {
+        @media screen and (min-width: 768px) { @content }
     }
 }
